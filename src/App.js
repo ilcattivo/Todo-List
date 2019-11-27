@@ -74,11 +74,15 @@ function App() {
         term={term}
         setTerm={setTerm}
       />
-      <TodoList
-        todos={visibleItems}
-        toggleTaskProp={toggleTaskProp}
-        removeTask={removeTask}
-      />
+      {visibleItems.length ? (
+        <TodoList
+          todos={visibleItems}
+          toggleTaskProp={toggleTaskProp}
+          removeTask={removeTask}
+        />
+      ) : (
+        <p className='todos-plug'>Add todos by the form below</p>
+      )}
       <AddForm addTask={addTask} />
     </div>
   );
