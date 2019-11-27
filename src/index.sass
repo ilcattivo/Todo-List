@@ -1,0 +1,89 @@
+body
+  margin: 0
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+code
+  font-family: source-code-pro, Menlo, Monaco, "Courier New", monospace
+
+input::placeholder
+  padding-left: 3px
+
+.app
+  max-width: 320px
+  margin: 0 auto
+  margin-top: 80px
+  padding: 1em
+  border: 1px solid #555
+
+.todo-list
+  margin-bottom: 0
+  list-style: none
+  padding-left: 0
+
+.todo-list_item
+  display: flex
+  justify-content: space-between
+  margin-bottom: 7px
+
+.todo-item_title
+  font-size: 1.1rem
+  cursor: pointer
+  user-select: none
+  max-width: 250px
+
+.important
+  color: steelblue
+  font-weight: bold
+
+.done
+  text-decoration: line-through
+
+%btn
+  background-color: transparent
+  padding: 6px
+  border: 1px solid
+  border-radius: 4px
+  cursor: pointer
+  font-size: 1rem
+  line-height: 1
+
+.btn-active
+  background-color: steelblue
+  color: #fff
+
+.btn-icon
+  width: 30px
+  height: 30px
+
+.btn-primary
+  @extend %btn
+  border-color: steelblue
+
+.btn-danger
+  @extend %btn
+  border-color: red
+
+.btn-group
+  button
+    border-radius: 0
+  button:first-child
+    border-top-left-radius: 4px
+    border-bottom-left-radius: 4px
+    border-right-width: 0
+  button:last-child
+    border-top-right-radius: 4px
+    border-bottom-right-radius: 4px
+    border-left-width: 0
+
+.add-form
+  display: flex
+  justify-content: space-between
+  button
+    padding-left: 17px
+    padding-right: 16px
+
+.filter-form
+  display: flex
+  justify-content: space-between
