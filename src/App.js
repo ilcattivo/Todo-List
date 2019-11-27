@@ -1,5 +1,6 @@
 import React from "react";
 
+import Header from "./header";
 import TodoList from "./todo-list";
 import AddForm from "./add-form";
 import TodoFilter from "./todo-filter";
@@ -61,9 +62,12 @@ function App() {
   };
 
   const visibleItems = filterTodos(searchTodos(todos));
+  const done = todos.filter(task => task.done === true).length;
+  const left = todos.length - done;
 
   return (
     <div className='app'>
+      <Header done={done} left={left} />
       <TodoFilter
         filter={filter}
         setFilter={setFilter}
